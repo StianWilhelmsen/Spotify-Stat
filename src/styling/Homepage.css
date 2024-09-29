@@ -1,0 +1,160 @@
+.homepage-wrapper {
+    display: flex;
+    flex-direction:row;
+    height: 100vh;
+}
+
+.user-wrapper {
+    width: 20vh;
+    height: 100%;
+    background-color: #282828;
+    color: white;
+    padding: 10px 50px 10px 10px;
+    display:grid;
+    justify-content: space-between;
+}
+
+.song-duration-info {
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar-container {
+    flex-grow: 1;
+    height: 5px;
+    background-color: #5e5e5e;
+    margin: 0 10px;
+    position: relative;
+    margin: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #b1b1b1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: width 0.5s ease; /* Smooth transition for the loading bar */
+}
+
+.song-name-info {
+    display: block;
+    text-align: center;
+}
+
+#current-song {
+    font-size: 1rem;
+}
+
+#current-artist {
+    font-size: 0.8rem;
+}
+
+.currently-playing-div {
+    justify-content: flex-end;
+}
+
+.player-controller {
+    margin: 5px;
+    display: flex;
+    place-content: center;
+}
+
+#controller-button {
+    border: 1px solid white;
+    width: 2.5rem;
+    margin: 3px;
+}
+
+#controller-button:hover {
+    background: rgba(94, 94, 94, 0.7);
+}
+
+.top-tracks {
+    width: 50%;
+}
+
+.top-artists {
+    width: 50%;
+}
+
+#username {
+    font-weight: bold;
+    margin: 0px 10px 10px 0px;
+}
+
+.sub-title {
+    font-size: 14px;
+    margin: 0px 10px 10px 0px;
+}
+
+.tracks-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    list-style: none;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.artists-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    list-style: none;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.top-artists ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(5, 1fr); /* Five rows to accommodate five items in the first column */
+    gap: 10px; /* Space between grid items */
+    align-items: start;
+    margin-left: 20%;
+}
+
+.centered-btn-div {
+    display: flex;
+    justify-content: center;
+}
+
+.interactive-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    color: white;
+    padding: 10px 50px 10px 10px;
+}
+
+.tracks-artists-interactive-section {
+    display: flex;
+}
+
+.header-interactive-section {
+    height: 5rem;
+    border-bottom: 1px solid #afafaf;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.interactive-header-title {
+    font-size: 32px;
+}
+
+#interactive-sub-title {
+    text-align: center;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
